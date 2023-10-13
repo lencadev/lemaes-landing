@@ -109,7 +109,7 @@ License: https://themeforest.net/licenses/standard
 
       Waypoint.destroyAll();
 
-      if( getWindowWidth() >= 1200 && getWindowHeight() >= 768 ){
+      if( getWindowWidth() >= 0 && getWindowHeight() >= 0 ){
         if( !$ln_fullPage.hasClass('fullpage-wrapper') || $ln_fullPage.hasClass('fp-destroyed') ){
 
           $('.ln-section').each(function(){
