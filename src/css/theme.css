@@ -16616,14 +16616,14 @@ select.form-control.form-control-soft-dark:focus::-ms-value {
 }
 
 .navbar-brand-img {
-  max-height: 1.5rem;
+  max-height: 5rem;
   width: auto;
 }
 
-.navbar-dark .navbar-brand .navbar-brand-text,
+/* .navbar-dark .navbar-brand .navbar-brand-text,
 .navbar-dark .navbar-brand .navbar-brand-img {
   filter: brightness(0) invert(1);
-}
+} */
 
 @media (max-width: 991.98px) {
   .navbar-btn {
