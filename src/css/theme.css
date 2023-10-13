@@ -19921,7 +19921,7 @@ body:not(.layout-mobile).ln-fullpage-intro-active .ln-copyright {
 .ln-social-icons a {
   display: block;
   margin: 0;
-  font-size: 18px;
+  font-size: 30px;
   text-align: center;
   transition: opacity 0.3s ease-out;
 }
