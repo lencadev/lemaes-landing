@@ -69,6 +69,33 @@ body {
   outline: 0 !important;
 }
 
+
+
+.clientes-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; 
+  width:100vh;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px; /* Espacio entre los elementos */
+  transition: background-color 0.5s ease;
+  margin: auto; /* Centra el div en la página */
+}
+
+.clientes-container img {
+  width: 100px;
+  height: auto;
+  object-fit: cover;
+}
+
+
+
+
+
+
 hr {
   box-sizing: content-box;
   height: 0;
