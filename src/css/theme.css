@@ -86,6 +86,7 @@ body {
 }
 
 .clientes-container img {
+  margin-left: 20px; 
   width: 100px;
   height: auto;
   object-fit: cover;
