@@ -97,7 +97,6 @@ body {
   }
 }
 
-/* Estilo para todas las imágenes, incluida la primera */
 .clientes-container img {
   margin: 0;
   width: 130px;
@@ -105,19 +104,14 @@ body {
   object-fit: cover;
 }
 
-/* Espacio entre todas las imágenes, incluida la primera */
 .clientes-container img:not(:first-child) {
   margin-left: 100px;
 }
 
-/* Estilo específico para la primera imagen */
+
 .clientes-container img:first-child {
-  margin-left: 100px; /* O el valor que desees */
+  margin-left: 100px;
 }
-
-
-
-
 
 
 hr {
