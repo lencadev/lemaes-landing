@@ -75,21 +75,44 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: auto; 
-  width:100vh;
-  background-color: white;
+  height: auto;
+  width: 100%;
+  background: linear-gradient(90deg, white, transparent, white);
+  background-size: 200% 100%;
+  animation: destello 2s infinite;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px; /* Espacio entre los elementos */
+  gap: 20px;
   transition: background-color 0.5s ease;
-  margin: auto; /* Centra el div en la página */
+  margin: auto;
+  text-align: center; /* Centrar el contenido horizontalmente */
 }
 
+@keyframes destello {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Estilo para todas las imágenes, incluida la primera */
 .clientes-container img {
-  margin-left: 20px; 
-  width: 100px;
+  margin: 0;
+  width: 130px;
   height: auto;
   object-fit: cover;
+}
+
+/* Espacio entre todas las imágenes, incluida la primera */
+.clientes-container img:not(:first-child) {
+  margin-left: 100px;
+}
+
+/* Estilo específico para la primera imagen */
+.clientes-container img:first-child {
+  margin-left: 100px; /* O el valor que desees */
 }
 
 
