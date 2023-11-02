@@ -16667,10 +16667,12 @@ select.form-control.form-control-soft-dark:focus::-ms-value {
 }
 
 .logo-img {
-  max-height: 20rem;
+  max-height: 50rem;
   width: auto;
   margin-left: 180px;
-  margin-top:50px;
+  margin-top:10px;
+  filter: drop-shadow(0px 1px 2px white);
+
 }
 
 /* .navbar-dark .navbar-brand .navbar-brand-text,
