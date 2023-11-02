@@ -77,9 +77,9 @@ body {
   align-items: center;
   height: auto;
   width: 100%;
-  background: linear-gradient(90deg, white, transparent, white);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), transparent, rgba(255, 255, 255, 0.8));
   background-size: 200% 100%;
-  animation: destello 2s infinite;
+  animation: destello 4s infinite; /* Más lento (4 segundos) */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
@@ -96,6 +96,7 @@ body {
     background-position: -200% 0;
   }
 }
+
 
 .clientes-container img {
   margin: 0;
