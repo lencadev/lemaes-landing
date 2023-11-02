@@ -130,6 +130,7 @@ License: https://themeforest.net/licenses/standard
             anchors: anchors,
 
             //Scrolling
+            scrollHorizontally: false,
             scrollingSpeed: 700,
             autoScrolling: true,
             fitToSection: true,
@@ -183,7 +184,7 @@ License: https://themeforest.net/licenses/standard
               ln_setSectionScheme(uiScheme);
 
               // Scroll progress
-              ln_scrollProgress(nextIndex);
+              // ln_scrollProgress(nextIndex);
             },
             afterLoad: function(anchorLink, index){
               if(index == 1){
@@ -236,6 +237,9 @@ License: https://themeforest.net/licenses/standard
               ln_setSectionScheme(uiScheme);
             }
           });
+          
+          $.fn.fullpage.setAllowScrolling(false)
+          $.fn.fullpage.setKeyboardScrolling(false)
         }
       } else {
         // Fullpage - Destroy
