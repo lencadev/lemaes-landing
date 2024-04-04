@@ -73,20 +73,32 @@ body {
 
 .clientes-container {
   display: flex;
+  flex-wrap: wrap; /* Permitir que las imágenes se envuelvan a la siguiente línea si no caben en una sola fila */
   justify-content: center;
   align-items: center;
-  height: auto;
-  width: 100%;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), transparent, rgba(255, 255, 255, 0.8));
   background-size: 200% 100%;
-  animation: destello 4s infinite; /* Más lento (4 segundos) */
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  animation: destello 4s infinite; /* Animación de destello */
+  gap: 20px; /* Espacio entre las imágenes */
   transition: background-color 0.5s ease;
-  margin: auto;
-  text-align: center; /* Centrar el contenido horizontalmente */
+  margin: auto; /* Centrar el contenedor */
+  padding: 20px; /* Agregar un poco de espacio alrededor del contenedor */
 }
+
+.clientes-container img {
+  max-width: 100%; /* Hacer que las imágenes sean responsive */
+  height: auto; /* Mantener la relación de aspecto de las imágenes */
+  display: block; /* Evitar espacios adicionales debajo de las imágenes */
+  margin-bottom: 20px; /* Añadir espacio entre las imágenes */
+}
+
+/* Consulta de medios para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .clientes-container {
+    padding: 10px; /* Reducir el espacio alrededor del contenedor en dispositivos móviles */
+  }
+}
+
 
 @keyframes destello {
   0% {
