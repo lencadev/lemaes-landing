@@ -71,32 +71,19 @@ body {
 
 
 
-.clientes-container {
+/* .clientes-container {
   display: flex;
-  flex-wrap: wrap; /* Permitir que las imágenes se envuelvan a la siguiente línea si no caben en una sola fila */
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), transparent, rgba(255, 255, 255, 0.8));
   background-size: 200% 100%;
-  animation: destello 4s infinite; /* Animación de destello */
-  gap: 20px; /* Espacio entre las imágenes */
+  animation: destello 4s infinite; 
+  gap: 20px; 
   transition: background-color 0.5s ease;
-  margin: auto; /* Centrar el contenedor */
-  padding: 20px; /* Agregar un poco de espacio alrededor del contenedor */
-}
-
-.clientes-container img {
-  max-width: 100%; /* Hacer que las imágenes sean responsive */
-  height: auto; /* Mantener la relación de aspecto de las imágenes */
-  display: block; /* Evitar espacios adicionales debajo de las imágenes */
-  margin-bottom: 20px; /* Añadir espacio entre las imágenes */
-}
-
-/* Consulta de medios para dispositivos móviles */
-@media screen and (max-width: 768px) {
-  .clientes-container {
-    padding: 10px; /* Reducir el espacio alrededor del contenedor en dispositivos móviles */
-  }
+  margin: auto; 
+  padding: 10vh; 
+  height: 100vh;
 }
 
 
@@ -115,15 +102,56 @@ body {
   width: 130px;
   height: auto;
   object-fit: cover;
-}
+  
+} */
+
+.clientes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), transparent, rgba(255, 255, 255, 0.8));
+  background-size: 200% 100%;
+  animation: destello 4s infinite;
+  gap: 20px;
+  transition: background-color 0.5s ease;
+  margin: auto; 
+  padding: 10vh; 
+  height: 100vh;
+ }
+ 
+ @keyframes destello {
+   0% {
+     background-position: 200% 0;
+  }
+   100% {
+     background-position: -200% 0;
+  }
+ }
+ 
+ .clientes-container img {
+  margin: 0;
+  width: 100%; /* Ajusta el ancho a 100% para que sea responsivo */
+  max-width: 130px; /* Establece un ancho máximo para mantener el diseño original en pantallas más grandes */
+  height: auto;
+  object-fit: cover;
+ }
+ 
+ /* Ajusta los márgenes para pantallas más pequeñas */
+ @media (max-width: 768px) {
+  .clientes-container img {
+     margin-left: 50px; /* Reduce el margen para pantallas más pequeñas */
+  }
+ }
+ 
 
 .clientes-container img:not(:first-child) {
-  margin-left: 100px;
+  margin-left: 10px;
 }
 
 
 .clientes-container img:first-child {
-  margin-left: 100px;
+  margin-left: 10px;
 }
 
 
@@ -6309,6 +6337,7 @@ button.bg-light:focus {
 
 .bg-dark {
   background-color: #030507 !important;
+  height: 100% !important;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
@@ -16679,26 +16708,28 @@ select.form-control.form-control-soft-dark:focus::-ms-value {
 }
 
 .logo-img {
-  max-width: 80vh; /* Para asegurar que la imagen no se desborde del contenedor */
-  height: auto; /* Para mantener la relación de aspecto de la imagen */
-  margin-left: 5vh; /* Puedes ajustar el margen según tus necesidades */
-  margin-top: 10vh; /* Puedes ajustar el margen según tus necesidades */
+  max-width: 80vh;
+  height: auto; 
+  margin-left: 5vh; 
+  margin-top: 10vh; 
   filter: drop-shadow(1px 1px 1px black);
 }
 
 /* Consulta de medios para ajustar el tamaño del logo en pantallas pequeñas */
 @media screen and (max-width: 768px) {
   .logo-img {
-    max-width: 80%; /* Reducir el tamaño máximo del logo en pantallas pequeñas */
-    margin-left: 5vh; /* Ajustar el margen izquierdo para pantallas pequeñas */
-    margin-top: 5vh; /* Ajustar el margen superior para pantallas pequeñas */
+    max-width: 80%; 
+    margin-left: 5vh; 
+    margin-top: 5vh;
+    height: 100%
   }
 }
 
-/* .navbar-dark .navbar-brand .navbar-brand-text,
-.navbar-dark .navbar-brand .navbar-brand-img {
-  filter: brightness(0) invert(1);
-} */
+
+
+
+
+
 
 @media (max-width: 991.98px) {
   .navbar-btn {
@@ -17263,6 +17294,15 @@ section {
   left: 0;
   right: 0;
 }
+
+.overlay2 .overlay-global2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 .overlay .overlay-video video {
   position: absolute;
   top: 50%;
