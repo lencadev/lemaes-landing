@@ -144,7 +144,7 @@ body {
  @media only screen and (max-width: 500px) {
   .clientes-container {
     padding: 5vh; /* Reducir el relleno en pantallas más pequeñas */
-    width: 100vh;
+    width: 45vh;
   }
 }
 
