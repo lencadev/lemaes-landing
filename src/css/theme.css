@@ -71,7 +71,7 @@ body {
 
 
 
-/* .clientes-container {
+.clientes-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -103,44 +103,10 @@ body {
   height: auto;
   object-fit: cover;
   
-} */
-
-.clientes-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), transparent, rgba(255, 255, 255, 0.8));
-  background-size: 200% 100%;
-  animation: destello 4s infinite;
-  gap: 20px;
-  transition: background-color 0.5s ease;
-  margin: auto; 
-  padding: 10vh; 
-  height: 100vh;
- }
+}
 
 
- .clientes-container img {
-  margin: 0;
-  width: 100%; 
-  max-width: 160px; 
-  height: auto;
-  object-fit: cover;
- }
- 
- 
- @keyframes destello {
-   0% {
-     background-position: 200% 0;
-  }
-   100% {
-     background-position: -200% 0;
-  }
- }
- 
 
- 
  @media only screen and (max-width: 500px) {
   .clientes-container {
     padding: 5vh; /* Reducir el relleno en pantallas más pequeñas */
