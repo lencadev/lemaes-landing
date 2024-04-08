@@ -119,6 +119,16 @@ body {
   padding: 10vh; 
   height: 100vh;
  }
+
+
+ .clientes-container img {
+  margin: 0;
+  width: 100%; 
+  max-width: 160px; 
+  height: auto;
+  object-fit: cover;
+ }
+ 
  
  @keyframes destello {
    0% {
@@ -129,21 +139,14 @@ body {
   }
  }
  
- .clientes-container img {
-  margin: 0;
-  width: 100%; /* Ajusta el ancho a 100% para que sea responsivo */
-  max-width: 130px; /* Establece un ancho máximo para mantener el diseño original en pantallas más grandes */
-  height: auto;
-  object-fit: cover;
- }
+
  
- /* Ajusta los márgenes para pantallas más pequeñas */
- @media (max-width: 768px) {
-  .clientes-container img {
-     margin-left: 50px; /* Reduce el margen para pantallas más pequeñas */
+ @media only screen and (max-width: 500px) {
+  .clientes-container {
+    padding: 5vh; /* Reducir el relleno en pantallas más pequeñas */
+    width: 100vh;
   }
- }
- 
+}
 
 .clientes-container img:not(:first-child) {
   margin-left: 10px;
