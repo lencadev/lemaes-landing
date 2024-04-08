@@ -815,6 +815,10 @@ License: https://themeforest.net/licenses/standard
 
   $(window).on('load', function(){
     $(window).scroll();
+
+    setTimeout(() => {
+      $('.fp-scrollable').attr('style', 'height: 100vh;');
+    }, 200)
   });
 
   $(window).on('resize', function(){
@@ -832,5 +836,6 @@ License: https://themeforest.net/licenses/standard
     ln_backToTop();
     ln_navigationOnScroll();
   });
+
 
 })(jQuery);
