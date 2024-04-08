@@ -16715,7 +16715,11 @@ select.form-control.form-control-soft-dark:focus::-ms-value {
   height: auto; 
   margin-left: 5vh; 
   margin-top: 10vh; 
-  filter: drop-shadow(1px 1px 1px black);
+  filter: drop-shadow(-100px 70px 35px white);
+}
+
+.logo-wrapper {
+  filter: drop-shadow(100px 70px 35px white);
 }
 
 /* Consulta de medios para ajustar el tamaño del logo en pantallas pequeñas */
