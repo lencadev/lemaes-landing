@@ -144,7 +144,7 @@ body {
  @media only screen and (max-width: 500px) {
   .clientes-container {
     padding: 5vh; /* Reducir el relleno en pantallas más pequeñas */
-    width: 100vh;
+    width: 45vh;
   }
 }
 
@@ -16725,7 +16725,7 @@ select.form-control.form-control-soft-dark:focus::-ms-value {
 /* Consulta de medios para ajustar el tamaño del logo en pantallas pequeñas */
 @media screen and (max-width: 768px) {
   .logo-img {
-    max-width: 80%; 
+    max-width: 20vh; 
     margin-left: 5vh; 
     margin-top: 5vh;
     height: 100%
