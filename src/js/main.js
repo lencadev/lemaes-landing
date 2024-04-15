@@ -333,19 +333,31 @@ License: https://themeforest.net/licenses/standard
       }
     });
 
+    $(document).ready(function () {
+      // Cerrar el menú al hacer clic fuera de él
+      $(document).click(function (event) {
+          var clickover = $(event.target);
+          var _opened = $("#navbarCollapse").hasClass("show");
+          if (_opened === true && !clickover.closest('.navbar').length) {
+              $("#navbarCollapse").collapse('hide');
+          }
+      });
+  
+      // Cerrar el menú después de seleccionar una opción
+      $('#navigation .nav-link').click(function() {
+          $("#navbarCollapse").collapse('hide');
+      });
+  });
+
     // Close nav on click outside of '.site-navbar'
     $(document).on( 'click touchstart', function(e){
-      // if ( $('.site-navbar').is(e.target) || $(e.target).parents('.site-navbar').length > 0 || $('.site-navbar').is(e.target) || $(e.target).hasClass('navbar-toggler') ){
-      //   return;
-      // };
+      if ( $('.site-navbar').is(e.target) || $(e.target).parents('.site-navbar').length > 0 || $('.site-navbar').is(e.target) || $(e.target).hasClass('navbar-toggler') ){
+        return;
+      };
 
       if ( $siteNavbarToggler.attr('aria-expanded') === 'true' ){
         $siteNavbarToggler.trigger('click');
       }
-
-      if ( $('.site-navbar').is(e.target)  || $('.site-navbar').is(e.target) || $(e.target).hasClass('navbar-toggler') ){
-        $siteNavbarToggler.trigger('click');
-      };
     });
   }
 
