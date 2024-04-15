@@ -110,7 +110,7 @@ body {
  @media only screen and (max-width: 768px) {
   .clientes-container {
     padding: 5%;
-    width: 30%;
+    width: 25%;
     height:auto;
   }
 }
