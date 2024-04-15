@@ -335,15 +335,18 @@ License: https://themeforest.net/licenses/standard
 
     // Close nav on click outside of '.site-navbar'
     $(document).on( 'click touchstart', function(e){
-      if ( $('.site-navbar').is(e.target) || $(e.target).parents('.site-navbar').length > 0 || $('.site-navbar').is(e.target) || $(e.target).hasClass('navbar-toggler') ){
-        return;
-      };
+      // if ( $('.site-navbar').is(e.target) || $(e.target).parents('.site-navbar').length > 0 || $('.site-navbar').is(e.target) || $(e.target).hasClass('navbar-toggler') ){
+      //   return;
+      // };
 
       if ( $siteNavbarToggler.attr('aria-expanded') === 'true' ){
         $siteNavbarToggler.trigger('click');
       }
-    });
 
+      if ( $('.site-navbar').is(e.target)  || $('.site-navbar').is(e.target) || $(e.target).hasClass('navbar-toggler') ){
+        $siteNavbarToggler.trigger('click');
+      };
+    });
   }
 
   function ln_navigationOnScroll(){
