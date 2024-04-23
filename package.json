@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && cp terms.html dist/terms.html && cp -r src/ dist/src && cp -r include/ dist/include",
+    "build": "vite build && cp terms.html dist/terms.html && cp -r src/ dist/src",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "keywords": [],
