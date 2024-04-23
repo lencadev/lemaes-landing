@@ -437,7 +437,7 @@
           </div>
           <div class="col-12 col-lg-6 offset-lg-1 animated" data-animation="fadeInUp" data-animation-delay="150">
             <div class="contact-form">
-              <form class="mb-0" id="cf" name="cf" action="include/sendemail.php" method="post" autocomplete="off">
+              <form class="mb-0" id="cf" name="cf" autocomplete="off">
                 <div class="form-row">
 
                   <div class="col-12 col-md-6">
@@ -450,13 +450,6 @@
                     <div class="form-group">
                       <input type="email" id="cf-email" name="cf-email" placeholder="Correo electronico"
                         class="form-control required">
-                    </div>
-                  </div>
-
-                  <div class="col-12">
-                    <div class="form-group">
-                      <input type="text" id="cf-subject" name="cf-subject" placeholder="Asunto (Opcional)"
-                        class="form-control">
                     </div>
                   </div>
 
@@ -629,6 +622,7 @@
   <script src="src/vendor/granim.js/dist/granim.min.js"></script>
   <script src="src/vendor/slick/slick.min.js"></script>
   <script src="src/vendor/vegas/vegas.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
   <!-- Theme JS -->
   <script src="src/js/main.js"></script>

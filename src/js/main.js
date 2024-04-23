@@ -30,18 +30,24 @@ License: https://themeforest.net/licenses/standard
 (function($) {
     "use strict";
 
+  // @ts-ignore
+  emailjs.init("06h_-YQv4DWY_Dmqe");
+
   // Vars
   var $body = $('body'),
     $ln_fullPage = $('.ln-fullpage'),
     $siteNavbar = $('.site-navbar'),
     $siteNavbarCollapse = $('#navbarCollapse'),
     $siteNavbarToggler = $('.site-navbar .navbar-toggler-alternative'),
+    // @ts-ignore
     $siteNavbarMenu = $('#navigation'),
     siteNavbar_base = $siteNavbar.attr('data-navbar-base') ? $siteNavbar.attr('data-navbar-base') : '',
     siteNavbar_toggled = $siteNavbar.attr('data-navbar-toggled') ? $siteNavbar.attr('data-navbar-toggled') : '',
     siteNavbar_scrolled = $siteNavbar.attr('data-navbar-scrolled') ? $siteNavbar.attr('data-navbar-scrolled') : '',
     $backtotop = $('a.backtotop'),
+    // @ts-ignore
     animationsRepeat = true, // true, false - Only when you use Fullpage.js
+    // @ts-ignore
     target,
     trueMobile;
 
@@ -54,6 +60,7 @@ License: https://themeforest.net/licenses/standard
   }
 
   // System Detector
+  // @ts-ignore
   function ln_systemDetector() {
 
     var isMobile = {
@@ -91,6 +98,7 @@ License: https://themeforest.net/licenses/standard
 
   // [1. Loader]
   window.addEventListener( 'load', function(){
+    // @ts-ignore
     document.querySelector('body').classList.add('loaded');
   });
 
@@ -107,6 +115,7 @@ License: https://themeforest.net/licenses/standard
         }
       });
 
+      // @ts-ignore
       Waypoint.destroyAll();
 
       if( getWindowWidth() >= 0 && getWindowHeight() >= 0 ){
@@ -156,6 +165,7 @@ License: https://themeforest.net/licenses/standard
             slideSelector: '.ln-slide',
 
             // Events
+            // @ts-ignore
             onLeave: function(index, nextIndex, direction){
               if(nextIndex === 1){
                 $body.addClass('ln-fullpage-intro-active');
@@ -186,6 +196,7 @@ License: https://themeforest.net/licenses/standard
               // Scroll progress
               // ln_scrollProgress(nextIndex);
             },
+            // @ts-ignore
             afterLoad: function(anchorLink, index){
               if(index == 1){
                 $body.addClass('ln-fullpage-intro-active');
@@ -547,6 +558,7 @@ License: https://themeforest.net/licenses/standard
     }
 
     // Granim
+    // @ts-ignore
     $('[data-gradient-bg]').each( function( index, element ){
       var granimParent = $(this),
         granimID = 'granim-'+index+'',
@@ -558,6 +570,7 @@ License: https://themeforest.net/licenses/standard
       // Add canvas
       granimParent.prepend('<canvas id="'+granimID+'"></canvas>');
 
+      // @ts-ignore
       var granimInstance = new Granim({
         element: '#'+granimID,
         name: 'basic-gradient',
@@ -580,8 +593,10 @@ License: https://themeforest.net/licenses/standard
     $('.animated').each(function() {
       var $element = $(this);
 
+      // @ts-ignore
       new Waypoint({
         element: $element,
+        // @ts-ignore
         handler: function(direction) {
           var $element = this.element,
             animation = $element.attr('data-animation'),
@@ -693,7 +708,9 @@ License: https://themeforest.net/licenses/standard
         removalDelay: 300,
         mainClass: 'mfp-fade',
         callbacks: {
+          // @ts-ignore
           ajaxContentAdded: function(mfpResponse) {
+           // @ts-ignore
            ln_Slider();
           }
         }
@@ -784,18 +801,21 @@ License: https://themeforest.net/licenses/standard
           submitHandler: function(form) {
             elResult.fadeOut( 500 );
 
-            $(form).ajaxSubmit({
-              target: elResult,
-              dataType: 'json',
-              success: function( data ) {
-                elResult.html( data.message ).fadeIn( 500 );
-                if( data.alert != 'error' ) {
-                  $(form).clearForm();
-                  setTimeout(function(){
-                    elResult.fadeOut( 500 );
-                  }, 5000);
-                };
-              }
+            const formData = new FormData(form)
+            const [name, email, message] = Array.from(formData.entries())
+            // @ts-ignore
+            emailjs.send("service_w9yf6ml", "template_xz580hl", {
+              name: name[1],
+              email: email[1],
+              message: message[1]
+            }, '06h_-YQv4DWY_Dmqe').then(({ data }) => {
+              
+              $(form).clearForm();
+              elResult.html( "Te contactaremos pronto" ).fadeIn( 500 );
+
+              setTimeout(function(){
+                elResult.fadeOut( 500 );
+              }, 5000);
             });
           }
         });
@@ -805,6 +825,7 @@ License: https://themeforest.net/licenses/standard
   }
 
   // [14. Bootstrap]
+  // @ts-ignore
   function ln_bootstrap() {
 
     // Botostrap Tootltips
@@ -853,4 +874,5 @@ License: https://themeforest.net/licenses/standard
   });
 
 
+// @ts-ignore
 })(jQuery);
